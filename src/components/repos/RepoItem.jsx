@@ -1,20 +1,19 @@
-import React, { Component } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 
-export default class RepoItem extends Component {
+const RepoItem = ({ repo }) => {
 
-    static propTypes = {
-        repo: PropTypes.object.isRequired
-    }
-
-    render() {
-        return (
-            <div className="card">
-                <h3>
-                  <a href={this.props.repo.html_url}>{this.props.repo.name}</a>
-                </h3>
-                
-            </div>
-        )
-    }
+    return (
+        <div className="card">
+            <h3>
+                <a href={repo.html_url}>{repo.name}</a>
+            </h3>
+        </div>
+    )
 }
+
+RepoItem.propTypes = {
+    repo: PropTypes.object.isRequired
+}
+
+export default RepoItem;

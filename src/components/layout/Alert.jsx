@@ -1,14 +1,14 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Alert extends Component {
-    render() {
-        return (
-            this.props.alert !== null && (
-            <div className={this.props.alert.type}>
-                <p><i className="fas fa-info-circle"></i>{this.props.alert.msg}</p>
+const Alert = ({ alert }) => {
+    return (
+        alert !== null && (
+            <div className={alert.type}>
+                <p><i className="fas fa-info-circle"></i>{alert.msg}</p>
             </div>
 
-            )
         )
-    }
+    )
 }
+
+export default Alert;

@@ -1,12 +1,11 @@
-import React, { Component, Fragment } from 'react'
+import React, { Fragment } from 'react'
 
-export default class About extends Component {
-    render() {
-        return (
-            <Fragment>
-                <h1>About Page</h1>
-                <p>About Page Details</p>
-            </Fragment>
-        )
-    }
+const About = () => {
+    return (
+        <Fragment>
+            <h1>About Page</h1>
+            <p>About Page Details</p>
+        </Fragment>
+    )
 }
+export default About
